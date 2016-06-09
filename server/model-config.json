@@ -52,11 +52,11 @@
   },
   "Note": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Post": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Setting": {
     "dataSource": "db",
@@ -64,15 +64,15 @@
   },
   "Product": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Category": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Event": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "AuthProvider": {
     "dataSource": "db",

@@ -1,21 +1,21 @@
 {
-  "name": "loopback-angular-admin",
-  "subdomain": "loopback-angular-admin",
-  "description": "Quickly create admin interfaces on a Loopback 2.x API",
+  "name": "sinora-services",
+  "subdomain": "sinora-services",
+  "description": "Admin interfaces for health systems",
   "version": "0.1.1",
   "engines": {
     "node": "5.5.0",
     "npm": "3.3.12"
   },
-  "homepage": "https://github.com/beeman/loopback-angular-admin",
-  "author": "Bram Borggreve <borggreve@gmail.com>",
+  "homepage": "https://github.com/ArgonautsCrew/sirona-services",
+  "author": "Gustavo Rocha <email+sinora-services@gustavorps.net>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/beeman/loopback-angular-admin"
+    "url": "https://github.com/ArgonautsCrew/sirona-services"
   },
   "bugs": {
-    "url": "https://github.com/beeman/loopback-angular-admin/issues"
+    "url": "https://github.com/ArgonautsCrew/sirona-services/issues"
   },
   "scripts": {
     "test": "mocha",
