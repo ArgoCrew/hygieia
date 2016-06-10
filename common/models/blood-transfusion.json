@@ -1,0 +1,19 @@
+{
+  "name": "BloodTransfusion",
+  "plural": "blood_transfusions",
+  "base": "PersistedModel",
+  "properties": {
+    "when": {
+      "type": "date",
+      "required": true
+    },
+    "donor": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
