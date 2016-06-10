@@ -1,0 +1,21 @@
+{
+  "name": "BloodDonation",
+  "plural": "blood_donations",
+  "base": "PersistedModel",
+  "properties": {
+    "when": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "donor": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
