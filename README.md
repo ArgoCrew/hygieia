@@ -178,7 +178,7 @@ ________________________________________________________________________________
 Design
 ------
 
-[![http://i.imgur.com/Wa4BoSM.png]](https://coolors.co/app/7e3a27-e83a27-dbb755-ebb27f-f2f2f2)
+[![Palette #1](https://i.imgur.com/Wa4BoSM.png?2)](https://coolors.co/app/7e3a27-e83a27-dbb755-ebb27f-f2f2f2)
 
 ```scss
 /* Coolors Exported Palette - coolors.co/7e3a27-e83a27-dbb755-ebb27f-f2f2f2 */
