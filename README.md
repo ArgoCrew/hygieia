@@ -1,36 +1,16 @@
-# Sirona Services
+# Hygieia Services
 
-Sirona consists of an API and a management interface focused on the healthcare industry.
+> In Greek as well as Roman mythology, Hygieia (also Hygiea or Hygeia; Ancient Greek: Ὑγιεία or Ὑγεία, Latin: Hygēa or Hygīa), was the daughter of the god of medicine, Asclepius, and Epione. She was the goddess/personification of health (Greek: ὑγίεια - hugieia), cleanliness and hygiene. ~ [Wikipedia](https://en.wikipedia.org/wiki/Hygieia)
+
+Hygieia consists of an API and a management interface focused on the healthcare industry.
 
 **This software is not ready for production! It is still being developed and it will change in the future.**
 
-## Try it now!
-
-Deploy an instance on your Heroku account to play around with it!
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-An alternative way to get it running at Heroku is to install the [Heroku Toolbelt](https://toolbelt.heroku.com) and follow these steps:
-
-```
-git clone https://github.com/ArgonautsCrew/sirona-services.git
-cd mysirona-services
-heroku apps:create sirona-services
-git push heroku master
-```
-
-### Users
-
-After an installation the following users are created:
-
-- **Admin user**: Email: ```admin@admin.com```, password: ```admin```
-- **Regular user**: Email: ```user@user.com```:, password ```user```
-
-Please note, at this moment there is no difference in permissions for admin users or regular users. This needs to change in the future!
 
 ## Healthcare Features
 
 - When a blood transfusion is done it is sending a customized message to the donor
+
 
 ## Technical Features
 
@@ -48,7 +28,34 @@ Please note, at this moment there is no difference in permissions for admin user
 - Social authentication with [LoopBack passport](https://github.com/strongloop/loopback-component-passport/)
 - Multi-language support by [rubenv/angular-gettext](https://github.com/rubenv/angular-gettext)
 - User management
+- Send SMS and make Calls with [loopback-connector-twilio](https://github.com/dashby3000/loopback-connector-twilio)
 - Loading indicators [chieffancypants/angular-loading-bar](https://github.com/chieffancypants/angular-loading-bar)?
+
+
+## Try it now!
+
+Deploy an instance on your Heroku account to play around with it!
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+An alternative way to get it running at Heroku is to install the [Heroku Toolbelt](https://toolbelt.heroku.com) and follow these steps:
+
+```
+git clone https://github.com/ArgonautsCrew/hygieia.git
+cd hygieia
+heroku apps:create hygieia
+git push heroku master
+```
+
+### Users
+
+After an installation the following users are created:
+
+- **Admin user**: Email: ```admin@admin.com```, password: ```admin```
+- **Regular user**: Email: ```user@user.com```:, password ```user```
+
+Please note, at this moment there is no difference in permissions for admin users or regular users. This needs to change in the future!
+
 
 ## Installation
 
@@ -60,18 +67,20 @@ Installation depends on `node`/`npm` with `grunt` and `bower` installed globally
 npm install -g bower grunt-cli
 ```
 
-#### The one-liner install (please create an [issue](https://github.com/ArgonautsCrew/sirona-services/issues/new) if this one does not work!)
+### The one-liner install
+
+Please create an [issue](https://github.com/ArgonautsCrew/hygieia/issues/new) if this one does not work!
 
 ```shell
-git clone https://github.com/ArgonautsCrew/sirona-services.git && cd sirona-services && npm install && grunt build && grunt serve
+git clone https://github.com/ArgonautsCrew/hygieia.git && cd hygieia && npm install && grunt build && grunt serve
 ```
 
-### The steps above:
+### The steps above of one-liner install:
 
 #### Checkout the project:
 
 ```shell
-git clone https://github.com/ArgonautsCrew/sirona-services.git
+git clone https://github.com/ArgonautsCrew/hygieia.git
 ```
 
 #### Install the Node packages:
@@ -111,7 +120,7 @@ automatically restart the server when you change its code:
 npm run dev
 ```
 
-The command `grunt serve` explained below wil automatically start the API.
+The command `grunt serve` explained below will automatically start the API.
 
 ### Client
 
@@ -128,15 +137,16 @@ grunt serve
 It will open the project in your default browser with livereload enabled.
 This will take care of reloading the page when you change your code.
 
+
 ## Connect to a database
 
-You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable in `.env` file.
+You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable in `.env` file, if the file does not exist then create one.
 
 ```
 MONGODB_URL=mongodb://localhost:27017/loopback-angular-admin
 ```
 
-Set `INITDB` to true in `.env` file if you want to load the initial dataset, which creates the admin user. The memory database (default) does this automatically.
+Set `INITDB` to true in `.env` file if you want to load the initial dataset, if the file does not exist then create one, which creates the admin user. The memory database (default) does this automatically.
 
 ```
 INITDB=true
@@ -144,6 +154,15 @@ INITDB=true
 
 This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io) and [mongolab.com](https://mongolab.com)!
 
+
+## Connect to Twilio to send SMS
+
+You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one.
+
+```
+TWILIO_ACCOUNT_SID=YouTwilioAccountSid
+TWILIO_AUTH_TOKEN=YouTwilioAuthToken
+```
 
 ## Unit Testing using Karma/Jasmine
 
@@ -158,4 +177,4 @@ PhantomJS 1.9.8 (Linux): Executed 1 of 1 SUCCESS (0.007 secs / 0.029 secs)
 
 # Issues
 
-If you have any problems please [contact us](https://github.com/ArgonautsCrew/sirona-services/issues/new).
+If you have any problems please [contact us](https://github.com/ArgonautsCrew/hygieia/issues/new).

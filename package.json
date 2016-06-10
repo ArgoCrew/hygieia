@@ -7,15 +7,15 @@
     "node": "5.5.0",
     "npm": "3.3.12"
   },
-  "homepage": "https://github.com/ArgonautsCrew/sirona-services",
+  "homepage": "https://github.com/ArgonautsCrew/hygieia-services",
   "author": "Gustavo Rocha <email+sinora-services@gustavorps.net>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArgonautsCrew/sirona-services"
+    "url": "https://github.com/ArgonautsCrew/hygieia-services"
   },
   "bugs": {
-    "url": "https://github.com/ArgonautsCrew/sirona-services/issues"
+    "url": "https://github.com/ArgonautsCrew/hygieia-services/issues"
   },
   "scripts": {
     "test": "mocha",

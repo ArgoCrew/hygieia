@@ -1,7 +1,7 @@
 {
   "name": "sinora-services",
   "description": "Admin interfaces for health systems",
-  "url": "https://github.com/ArgonautsCrew/sirona-services",
+  "url": "https://github.com/ArgonautsCrew/hygieia-services",
   "logo": "https://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "angular", "loopback", "admin", "api"]
 }
