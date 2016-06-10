@@ -1,6 +1,7 @@
-[![Hygieia. Detail aus der Medizin by Gustav Klimt](http://www.austria.info/media/17083/thumbnails/klimt-und-die-ringstrasse--belvedere--.jpg.3023126.jpg) </br> Hygieia. Detail aus der Medizin by Gustav Klimt](https://www.kunstkopie.nl/a/gustav-klimt/hygieia-detail-aus-der-me.html)
+[![Hygieia. Detail aus der Medizin by Gustav Klimt](http://www.austria.info/media/17083/thumbnails/klimt-und-die-ringstrasse--belvedere--.jpg.3023126.jpg)</br>Hygieia. Detail aus der Medizin by Gustav Klimt](https://www.kunstkopie.nl/a/gustav-klimt/hygieia-detail-aus-der-me.html)
 
-# Hygieia Services
+Hygieia Services
+================
 
 > In Greek as well as Roman mythology, Hygieia (also Hygiea or Hygeia; Ancient Greek: Ὑγιεία or Ὑγεία, Latin: Hygēa or Hygīa), was the daughter of the god of medicine, Asclepius, and Epione. She was the goddess/personification of health (Greek: ὑγίεια - hugieia), cleanliness and hygiene. ~ [Wikipedia](https://en.wikipedia.org/wiki/Hygieia)
 
@@ -9,12 +10,14 @@ Hygieia consists of an API and a management interface focused on the healthcare 
 **This software is not ready for production! It is still being developed and it will change in the future.**
 
 
-## Healthcare Features
+Healthcare Features
+-------------------
 
 - When a blood transfusion is done it is sending a customized message to the donor
 
 
-## Technical Features
+Technical Features
+------------------
 
 - A LoopBack REST API with authentication enabled built on the [LoopBack Generator](https://www.npmjs.org/package/generator-loopback)
 - A GUI built with AngularJS based on the [Angular Generator](https://github.com/yeoman/generator-angular)
@@ -34,7 +37,8 @@ Hygieia consists of an API and a management interface focused on the healthcare 
 - Loading indicators [chieffancypants/angular-loading-bar](https://github.com/chieffancypants/angular-loading-bar)?
 
 
-## Try it now!
+Try it now!
+-----------
 
 Deploy an instance on your Heroku account to play around with it!
 
@@ -57,9 +61,10 @@ After an installation the following users are created:
 - **Regular user**: Email: ```user@user.com```:, password ```user```
 
 Please note, at this moment there is no difference in permissions for admin users or regular users. This needs to change in the future!
+________________________________________________________________________________
 
-
-## Installation
+Installation
+------------
 
 ### Dependencies
 
@@ -69,41 +74,25 @@ Installation depends on `node`/`npm` with `grunt` and `bower` installed globally
 npm install -g bower grunt-cli
 ```
 
-### The one-liner install
+### The "one-liner" install
 
 Please create an [issue](https://github.com/ArgonautsCrew/hygieia/issues/new) if this one does not work!
 
 ```shell
-git clone https://github.com/ArgonautsCrew/hygieia.git && cd hygieia && npm install && grunt build && grunt serve
-```
-
-### The steps above of one-liner install:
-
-#### Checkout the project:
-
-```shell
-git clone https://github.com/ArgonautsCrew/hygieia.git
-```
-
-#### Install the Node packages:
-
-```shell
-npm install
-```
-
-#### Run grunt build:
-
-```shell
-grunt build
-```
-
-#### Run grunt serve to start the API and frontend:
-
-```shell
+# Clone the project
+git clone https://github.com/ArgonautsCrew/hygieia.git && \
+cd hygieia && \
+# Install the packages
+npm install && \
+# Build
+grunt build && \
+# Start the API and frontend services
 grunt serve
 ```
+________________________________________________________________________________
 
-## Running
+Running
+-------
 
 The project is separated in a server and a client.
 
@@ -124,6 +113,33 @@ npm run dev
 
 The command `grunt serve` explained below will automatically start the API.
 
+
+#### Connect to a database
+
+You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable in `.env` file, if the file does not exist then create one.
+
+```
+MONGODB_URL=mongodb://localhost:27017/hygieia
+```
+
+Set `INITDB` to true in `.env` file if you want to load the initial dataset, if the file does not exist then create one, which creates the admin user. The memory database (default) does this automatically.
+
+```
+INITDB=true
+```
+
+This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io) and [mongolab.com](https://mongolab.com)!
+
+
+#### Connect to Twilio to send SMS
+
+You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one. [More information about Twilio Acount SID and Twilio Auth Tokens](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-i-change-it)
+
+```
+TWILIO_ACCOUNT_SID=YouTwilioAccountSid
+TWILIO_AUTH_TOKEN=YouTwilioAuthToken
+```
+
 ### Client
 
 Rebuild the lb-services.js file with the correct `API_URL` for development.
@@ -139,44 +155,37 @@ grunt serve
 It will open the project in your default browser with livereload enabled.
 This will take care of reloading the page when you change your code.
 
+### Unit Testing using Karma/Jasmine
 
-## Connect to a database
-
-You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable in `.env` file, if the file does not exist then create one.
-
-```
-MONGODB_URL=mongodb://localhost:27017/loopback-angular-admin
-```
-
-Set `INITDB` to true in `.env` file if you want to load the initial dataset, if the file does not exist then create one, which creates the admin user. The memory database (default) does this automatically.
-
-```
-INITDB=true
-```
-
-This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io) and [mongolab.com](https://mongolab.com)!
-
-
-## Connect to Twilio to send SMS
-
-You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one. [More information about Twilio Acount SID and Twilio Auth Tokens](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-i-change-it)
-
-```
-TWILIO_ACCOUNT_SID=YouTwilioAccountSid
-TWILIO_AUTH_TOKEN=YouTwilioAuthToken
-```
-
-## Unit Testing using Karma/Jasmine
-
-$ node_modules/.bin/karma start client/test/karma.conf.js
+node_modules/.bin/karma start client/test/karma.conf.js
 
 ```shell
-INFO [karma]: Karma v0.12.31 server started at http://localhost:8080/
-INFO [launcher]: Starting browser PhantomJS
-INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket aLJmRuSNUH2rPfpWgS3l with id 89641972
-PhantomJS 1.9.8 (Linux): Executed 1 of 1 SUCCESS (0.007 secs / 0.029 secs)
+node_modules/.bin/karma start client/test/karma.conf.js
+# INFO [karma]: Karma v0.12.31 server started at http://localhost:8080/
+# INFO [launcher]: Starting browser PhantomJS
+# INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket aLJmRuSNUH2rPfpWgS3l with id 89641972
+# PhantomJS 1.9.8 (Linux): Executed 1 of 1 SUCCESS (0.007 secs / 0.029 secs)
 ```
+________________________________________________________________________________
 
-# Issues
+Comunity & Communication
+------------------------
 
+### Issues
 If you have any problems please [contact us](https://github.com/ArgonautsCrew/hygieia/issues/new).
+________________________________________________________________________________
+
+Design
+------
+
+[![http://i.imgur.com/Wa4BoSM.png]](https://coolors.co/app/7e3a27-e83a27-dbb755-ebb27f-f2f2f2)
+
+```scss
+/* Coolors Exported Palette - coolors.co/7e3a27-e83a27-dbb755-ebb27f-f2f2f2 */
+
+$color1: #7e3a27; //rgba(126, 58, 39, 100)
+$color2: #e83a27; //rgba(232, 58, 39, 100)
+$color3: #dbb755; //rgba(219, 183, 85, 100)
+$color4: #ebb27f; //rgba(235, 178, 127, 100)
+$color5: #f2f2f2; //rgba(242, 242, 242, 100)
+```
