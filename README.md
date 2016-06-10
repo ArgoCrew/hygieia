@@ -157,7 +157,7 @@ This also works with the free hosted MongoDB instances at [compose.io](https://w
 
 ## Connect to Twilio to send SMS
 
-You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one.
+You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one. [More information about Twilio Acount SID and Twilio Auth Tokens](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-i-change-it)
 
 ```
 TWILIO_ACCOUNT_SID=YouTwilioAccountSid
