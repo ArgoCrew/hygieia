@@ -48,7 +48,7 @@
   },
   "Page": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Note": {
     "dataSource": "db",
@@ -85,5 +85,17 @@
   "Meta": {
     "dataSource": "db",
     "public": true
+  },
+  "BloodDonation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BloodTransfusion": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Twilio": {
+    "dataSource": "twilio",
+    "public": false
   }
 }
