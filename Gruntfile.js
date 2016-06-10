@@ -37,6 +37,11 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    env: {
+      dev: {
+        src : '.env'
+      },
+    },
     // Watches files for changes and runs tasks based on the changed files
     nggettext_extract: {
       pot: {
@@ -610,6 +615,7 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
+      'env:dev',
       'clean:server',
       'api',
       'includeSource:server',
