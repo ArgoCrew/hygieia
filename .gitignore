@@ -13,7 +13,6 @@ storage/
 .sass-cache
 providers.json
 bower_components
-docs
 client/coverage
 .vagrant
 /.project

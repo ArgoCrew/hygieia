@@ -3,7 +3,11 @@
 Hygieia Services
 ================
 
-> In Greek as well as Roman mythology, Hygieia (also Hygiea or Hygeia; Ancient Greek: Ὑγιεία or Ὑγεία, Latin: Hygēa or Hygīa), was the daughter of the god of medicine, Asclepius, and Epione. She was the goddess/personification of health (Greek: ὑγίεια - hugieia), cleanliness and hygiene. ~ [Wikipedia](https://en.wikipedia.org/wiki/Hygieia)
+> In Greek as well as Roman mythology, Hygieia (also Hygiea or Hygeia;
+> Ancient Greek: Ὑγιεία or Ὑγεία, Latin: Hygēa or Hygīa),
+> was the daughter of the god of medicine, Asclepius, and Epione. 
+> She was the goddess/personification of health (Greek: ὑγίεια - hugieia),
+> cleanliness and hygiene. ~ [Wikipedia](https://en.wikipedia.org/wiki/Hygieia)
 
 Hygieia consists of an API and a management interface focused on the healthcare industry.
 
@@ -60,7 +64,8 @@ After an installation the following users are created:
 - **Admin user**: Email: ```admin@admin.com```, password: ```admin```
 - **Regular user**: Email: ```user@user.com```:, password ```user```
 
-Please note, at this moment there is no difference in permissions for admin users or regular users. This needs to change in the future!
+Please note, at this moment there is no difference in permissions for admin
+users or regular users. This needs to change in the future!
 ________________________________________________________________________________
 
 Installation
@@ -76,7 +81,8 @@ npm install -g bower grunt-cli
 
 ### The "one-liner" install
 
-Please create an [issue](https://github.com/ArgonautsCrew/hygieia/issues/new) if this one does not work!
+Please create an [issue](https://github.com/ArgonautsCrew/hygieia/issues/new)
+if this one does not work!
 
 ```shell
 # Clone the project
@@ -116,24 +122,31 @@ The command `grunt serve` explained below will automatically start the API.
 
 #### Connect to a database
 
-You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable in `.env` file, if the file does not exist then create one.
+You can specify the URL to the MongoDB database you want to use with the
+`MONGODB_URL` environment variable in `.env` file, if the file does not exist
+then create one.
 
 ```
 MONGODB_URL=mongodb://localhost:27017/hygieia
 ```
 
-Set `INITDB` to true in `.env` file if you want to load the initial dataset, if the file does not exist then create one, which creates the admin user. The memory database (default) does this automatically.
+Set `INITDB` to true in `.env` file if you want to load the initial dataset,
+if the file does not exist then create one, which creates the admin user.
+The memory database (default) does this automatically.
 
 ```
 INITDB=true
 ```
 
-This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io) and [mongolab.com](https://mongolab.com)!
+This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io)
+and [mongolab.com](https://mongolab.com)!
 
 
 #### Connect to Twilio to send SMS
 
-You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment variable in `.env` file, if the file does not exist then create one. [More information about Twilio Acount SID and Twilio Auth Tokens](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-i-change-it)
+You need specify the `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` environment
+variable in `.env` file, if the file does not exist then create one.
+[More information about Twilio Acount SID and Twilio Auth Tokens](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-i-change-it)
 
 ```
 TWILIO_ACCOUNT_SID=YouTwilioAccountSid

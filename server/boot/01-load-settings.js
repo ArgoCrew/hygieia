@@ -15,6 +15,12 @@ module.exports = function(app) {
       key: 'appName',
       value: 'LoopBack Admin'
     }, {
+      type: 'string',
+      key: 'com.api.blood_transfusion.donor_message',
+      value: 'A instituição X tem a felicidade de informar que o sangue que ' +
+            'você  doou ajudou a salvar mais uma vida! 😄\n' +
+            'Agracemos muito pela sua ação de bondade e desejamos muita saúde e paz.'
+    }, {
       type: 'select',
       key: 'appTheme',
       value: 'skin-blue',
